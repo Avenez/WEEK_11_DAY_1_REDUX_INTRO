@@ -6,7 +6,7 @@ export const prefCompaniesSlice = createSlice({
 
   // ---------- INITIAL STATE-------------
   initialState: {
-    value: ["ciao ciao"],
+    value: [],
   },
 
   // ----------REDUCERS-------------------
@@ -19,7 +19,7 @@ export const prefCompaniesSlice = createSlice({
         state.value.push(action.payload);
       }
 
-      //   state.value.forEach((i) => console.log(i));
+      state.value.forEach((i) => console.log(i));
       //   console.log(action.payload);
     },
   },
