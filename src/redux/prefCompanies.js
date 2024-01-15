@@ -22,8 +22,12 @@ export const prefCompaniesSlice = createSlice({
       state.value.forEach((i) => console.log(i));
       //   console.log(action.payload);
     },
+
+    remCompanie: (state, action) => {
+      state.value = state.value.filter((company) => company !== action.payload);
+    },
   },
 });
 
-export const { addCompanie } = prefCompaniesSlice.actions;
+export const { addCompanie, remCompanie } = prefCompaniesSlice.actions;
 export const prefCompaniesReducer = prefCompaniesSlice.reducer;
