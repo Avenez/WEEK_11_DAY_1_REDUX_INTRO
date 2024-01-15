@@ -6,14 +6,21 @@ export const prefCompaniesSlice = createSlice({
 
   // ---------- INITIAL STATE-------------
   initialState: {
-    value: [],
+    value: ["ciao ciao"],
   },
 
   // ----------REDUCERS-------------------
 
   reducers: {
     addCompanie: (state, action) => {
-      state.value.push(action.payload);
+      if (state.value.includes(action.payload)) {
+        console.log("compagnia già aggiunta!");
+      } else {
+        state.value.push(action.payload);
+      }
+
+      //   state.value.forEach((i) => console.log(i));
+      //   console.log(action.payload);
     },
   },
 });
