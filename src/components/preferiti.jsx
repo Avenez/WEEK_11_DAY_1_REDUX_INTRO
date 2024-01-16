@@ -19,8 +19,8 @@ const Preferiti = () => {
         HOME
       </button>
       <ul className="mt-2">
-        {preferiti.map((item) => (
-          <li className="mb-3">
+        {preferiti.map((item, index) => (
+          <li className="mb-3" key={`id-list${index}`}>
             <button
               className="btn btn-danger me-2"
               onClick={() => {
